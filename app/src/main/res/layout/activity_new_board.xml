@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--Author: Chinmay Roy
+        Website: https://chinmayroy.github.io-->
+
+    <TableLayout
+        android:layout_width="337dp"
+        android:layout_height="337dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.091"
+        android:layout_marginStart="30dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:id="@+id/tableRow1"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/cellGroupFragment"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="0"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment2"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="1"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment3"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:layout_weight="1"
+                android:tag="2" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/cellGroupFragment4"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="3"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment5"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="4"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment6"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="5"
+                android:layout_weight="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="117dp">
+
+            <fragment
+                android:id="@+id/cellGroupFragment7"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="6"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment8"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="7"
+                android:layout_weight="1" />
+
+            <fragment
+                android:id="@+id/cellGroupFragment9"
+                android:name="com.chinmay.roy.sudoku_game.fragments.CellGroupFragment"
+                android:layout_width="92dp"
+                android:layout_height="106dp"
+                android:tag="8"
+                android:layout_weight="1" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:width="150dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onGoBackButtonClicked"
+        android:text="@string/go_back_button"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="212dp"
+        android:width="150dp"
+        android:background="@color/colorPrimary"
+        android:onClick="onContinueButtonClicked"
+        android:text="@string/continue_new_board"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.964" />
+    <!--Author: Chinmay Roy
+        Website: https://chinmayroy.github.io-->
+</android.support.constraint.ConstraintLayout>
