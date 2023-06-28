@@ -6,6 +6,7 @@ If you want to play then [Download Now](https://github.com/chinmayroy/Sudoku_Gam
 
 ## Screenshot
 <img src="https://github.com/chinmayroy/Sudoku_Game/blob/develop/media/Screenshot-chinmaryoy-sudoku-game.png?raw=true" alt="Sudoku Game" width="20%" height="auto">
+<img src="https://github.com/chinmayroy/Sudoku_Game/blob/develop/media/Screenshot-chinmaryoy-sudoku-game2.png?raw=true" alt="Sudoku Game" width="20%" height="auto">
 
 ## Features
 
