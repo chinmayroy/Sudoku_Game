@@ -7,6 +7,8 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -112,5 +114,42 @@ public class NewBoardActivity extends AppCompatActivity implements CellGroupFrag
         Intent intent = new Intent("com.chinmay.roy.ChooseNumberActivity");
         intent.putExtra("newBoard", true);
         startActivityForResult(intent, 1);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_guidelines){
+            openInstructionsActivity();
+            return true;
+        } else if(id == R.id.action_contact_us){
+            openContactUsActivity();
+            return true;
+        } else if(id == R.id.action_about_developer){
+            openAboutDeveloperActivity();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void openInstructionsActivity(){
+        Intent intent = new Intent(NewBoardActivity.this, InstructionsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openContactUsActivity(){
+        Intent intent = new Intent(NewBoardActivity.this, ContactUsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openAboutDeveloperActivity(){
+        Intent intent = new Intent(NewBoardActivity.this, AboutDeveloperActivity.class);
+        startActivity(intent);
     }
 }

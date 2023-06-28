@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -44,7 +46,7 @@ public class GameActivity extends AppCompatActivity implements CellGroupFragment
         currentBoard = new Board();
         currentBoard.copyValues(startBoard.getGameCells());
 
-        int cellGroupFragments[] = new int[]{R.id.cellGroupFragment, R.id.cellGroupFragment2, R.id.cellGroupFragment3, R.id.cellGroupFragment4,
+        int[] cellGroupFragments = new int[]{R.id.cellGroupFragment, R.id.cellGroupFragment2, R.id.cellGroupFragment3, R.id.cellGroupFragment4,
                 R.id.cellGroupFragment5, R.id.cellGroupFragment6, R.id.cellGroupFragment7, R.id.cellGroupFragment8, R.id.cellGroupFragment9};
         for (int i = 1; i < 10; i++) {
             CellGroupFragment thisCellGroupFragment = (CellGroupFragment) getSupportFragmentManager().findFragmentById(cellGroupFragments[i-1]);
@@ -92,7 +94,7 @@ public class GameActivity extends AppCompatActivity implements CellGroupFragment
                 Board board = new Board();
                 // read all lines in the board
                 for (int i = 0; i < 9; i++) {
-                    String rowCells[] = line.split(" ");
+                    String[] rowCells = line.split(" ");
                     for (int j = 0; j < 9; j++) {
                         if (rowCells[j].equals("-")) {
                             board.setValue(i, j, 0);
@@ -125,13 +127,13 @@ public class GameActivity extends AppCompatActivity implements CellGroupFragment
             fileInputStream = this.openFileInput(fileName);
             InputStreamReader inputStreamReader = new InputStreamReader(fileInputStream);
             BufferedReader internalBufferedReader = new BufferedReader(inputStreamReader);
-            String line = internalBufferedReader.readLine();
+            String line;
             line = internalBufferedReader.readLine();
             while (line != null) {
                 Board board = new Board();
                 // read all lines in the board
                 for (int i = 0; i < 9; i++) {
-                    String rowCells[] = line.split(" ");
+                    String[] rowCells = line.split(" ");
                     for (int j = 0; j < 9; j++) {
                         if (rowCells[j].equals("-")) {
                             board.setValue(i, j, 0);
@@ -168,7 +170,7 @@ public class GameActivity extends AppCompatActivity implements CellGroupFragment
     }
 
     private boolean checkAllGroups() {
-        int cellGroupFragments[] = new int[]{R.id.cellGroupFragment, R.id.cellGroupFragment2, R.id.cellGroupFragment3, R.id.cellGroupFragment4,
+        int[] cellGroupFragments = new int[]{R.id.cellGroupFragment, R.id.cellGroupFragment2, R.id.cellGroupFragment3, R.id.cellGroupFragment4,
                 R.id.cellGroupFragment5, R.id.cellGroupFragment6, R.id.cellGroupFragment7, R.id.cellGroupFragment8, R.id.cellGroupFragment9};
         for (int i = 0; i < 9; i++) {
             CellGroupFragment thisCellGroupFragment = (CellGroupFragment) getSupportFragmentManager().findFragmentById(cellGroupFragments[i]);
@@ -243,5 +245,43 @@ public class GameActivity extends AppCompatActivity implements CellGroupFragment
         } else {
             Toast.makeText(this, getString(R.string.start_piece_error), Toast.LENGTH_SHORT).show();
         }
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.options, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_guidelines){
+            openInstructionsActivity();
+            return true;
+        } else if(id == R.id.action_contact_us){
+            openContactUsActivity();
+            return true;
+        } else if(id == R.id.action_about_developer){
+            openAboutDeveloperActivity();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    public void openInstructionsActivity(){
+        Intent intent = new Intent(GameActivity.this, InstructionsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openContactUsActivity(){
+        Intent intent = new Intent(GameActivity.this, ContactUsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openAboutDeveloperActivity(){
+        Intent intent = new Intent(GameActivity.this, AboutDeveloperActivity.class);
+        startActivity(intent);
     }
 }
