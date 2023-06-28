@@ -2,6 +2,8 @@
 
 Sudoku Game is an Android application developed using Android Studio that brings the popular Sudoku puzzle game to your mobile device. It provides an intuitive interface for playing Sudoku, featuring puzzle generation, solving capabilities, and customization options.
 
+[Download](https://github.com/chinmayroy/Sudoku_Game/blob/release/sudoku-game.apk)
+
 ## Screenshot
 
 ## Features
