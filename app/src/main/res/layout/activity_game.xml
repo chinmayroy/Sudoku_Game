@@ -8,12 +8,11 @@
     <TableLayout
         android:layout_width="337dp"
         android:layout_height="337dp"
-        android:layout_marginLeft="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091"
-        android:layout_marginStart="30dp">
+        app:layout_constraintVertical_bias="0.1">
 
         <TableRow
             android:layout_width="match_parent"
@@ -106,36 +105,36 @@
 
     </TableLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.85">
     <Button
         android:id="@+id/buttonShowInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="224dp"
         android:width="150dp"
+        android:layout_marginRight="3dp"
         android:background="@color/colorPrimary"
         android:onClick="onShowInstructionsButtonClicked"
         android:text="@string/show_instructions"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="40dp"
         android:width="150dp"
+        android:layout_marginLeft="3dp"
         android:background="@color/colorPrimary"
         android:onClick="onGoBackButtonClicked"
         android:text="@string/go_back_button"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.964" />
-
+        android:textColor="@color/white" />
+    </LinearLayout>
     <Button
         android:id="@+id/buttonCheckBoard"
         android:layout_width="wrap_content"
@@ -147,8 +146,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.822"
+        app:layout_constraintVertical_bias="0.722"
         android:layout_marginStart="180dp" />
+
+    <TextView
+        android:id="@+id/copyrightText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/copyright_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.922" />
     <!--Author: Chinmay Roy
         Website: https://chinmayroy.github.io-->
 
