@@ -5,8 +5,9 @@ Sudoku Game is an Android application developed using Android Studio that brings
 If you want to play then [Download Now](https://github.com/chinmayroy/Sudoku_Game/raw/release/sudoku-game.apk)
 
 ## Screenshot
+<div style="display: flex; justify-content: space-between; align-items: center;">
 <img src="https://github.com/chinmayroy/Sudoku_Game/blob/develop/media/Screenshot-chinmaryoy-sudoku-game.png?raw=true" alt="Sudoku Game" width="20%" height="auto">
-<img src="https://github.com/chinmayroy/Sudoku_Game/blob/develop/media/Screenshot-chinmaryoy-sudoku-game2.png?raw=true" alt="Sudoku Game" width="20%" height="auto">
+<img src="https://github.com/chinmayroy/Sudoku_Game/blob/develop/media/Screenshot-chinmaryoy-sudoku-game2.png?raw=true" alt="Sudoku Game" width="20%" height="auto"></div>
 
 ## Features
 
